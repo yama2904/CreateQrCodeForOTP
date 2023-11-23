@@ -1,0 +1,30 @@
+﻿<mah:MetroWindow x:Class="CreateQrCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="QRコード生成ツール"
+        Height="620" 
+        Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="500"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="サービス名" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtServiceName" HorizontalAlignment="Left" Margin="62,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="142"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="220,0,0,0" TextWrapping="Wrap" Text="アカウント名" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtAccountName" HorizontalAlignment="Left" Margin="281,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+
+        <Image x:Name="imgQrCode" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtQr" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,10,0" BorderThickness="0" IsReadOnly="True"/>
+        <Button x:Name="btnExecute" Content="生成" HorizontalAlignment="Left" Margin="424,0,0,0" VerticalAlignment="Center" Width="66" Click="btnExecute_Click"/>
+
+    </Grid>
+</mah:MetroWindow>
